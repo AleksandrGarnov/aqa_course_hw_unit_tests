@@ -5,6 +5,18 @@
  */
 
 let evenNumbersResult = '';
+// console.log(typeof evenNumbersResult)
+for (let l = 10; l >= 0; l = l - 2 ) {
+    if (evenNumbersResult) {
+        evenNumbersResult = evenNumbersResult + "-"
+    }
+
+evenNumbersResult = evenNumbersResult + l
+}
+
+console.log(evenNumbersResult);
+
+
 
 /**
  * Создать строку из 5 строк с увеличивающимся количеством смайликов ":)".
@@ -24,7 +36,7 @@ let smilePatternResult = '';
  * Переменная для результата `replaceSpacesWithOneResult` уже создана и содержит пустую строку.
  * Ожидаемый результат: 'Hello!1I1am1a1JS1student!'
  */
-const text = 'Hello! I am a JS student!';
-let replaceSpacesWithOneResult = '';
+// const text = 'Hello! I am a JS student!';
+// let replaceSpacesWithOneResult = '';
 
-export { evenNumbersResult, smilePatternResult, replaceSpacesWithOneResult };
+// export { evenNumbersResult, smilePatternResult, replaceSpacesWithOneResult };
