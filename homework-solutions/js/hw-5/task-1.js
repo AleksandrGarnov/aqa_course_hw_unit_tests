@@ -6,12 +6,12 @@
 
 let evenNumbersResult = '';
 // console.log(typeof evenNumbersResult)
-for (let i = 10; i >= 0; i = i - 2 ) { 
+for (let i = 10; i >= 0; i = i - 2) {
     if (evenNumbersResult) {
         evenNumbersResult = evenNumbersResult + "-"
     }
 
-evenNumbersResult = evenNumbersResult + i
+    evenNumbersResult = evenNumbersResult + i
 }
 
 // console.log(evenNumbersResult);
@@ -29,21 +29,14 @@ evenNumbersResult = evenNumbersResult + i
 
 let smilePatternResult = '';
 
-for (let i = 0; i <= 5; i++){
-    if (i === 0) {
-    smilePatternResult = smilePatternResult + `:)\n`
-    } else if (i === 2) {
-        smilePatternResult = smilePatternResult + ':):)\n'
-    } else if (i === 3) {
-        smilePatternResult = smilePatternResult + ':):):)\n'
-    } else if (i === 4) {
-        smilePatternResult = smilePatternResult + ':):):):)\n'
-    } else if (i === 5) {
-        smilePatternResult = smilePatternResult + ':):):):):)'
-    } 
+for (let i = 1; i <= 5; i++) {
+    if (i <= 4) {
+        smilePatternResult = smilePatternResult + ":)".repeat(i) + `\n`
+    } else {
+        smilePatternResult = smilePatternResult + ":)".repeat(i)
+    }
 }
-// console.log(smilePatternResult);
-
+//  console.log(smilePatternResult);
 /**
  * Заменить все пробелы в переменной text на "1".
  * Переменная для результата `replaceSpacesWithOneResult` уже создана и содержит пустую строку.
@@ -53,13 +46,7 @@ for (let i = 0; i <= 5; i++){
 const text = 'Hello! I am a JS student!';
 let replaceSpacesWithOneResult = '';
 
-for (let i = 0; i < text.length; i++) {
-    if (text[i] === ' ') {
-    replaceSpacesWithOneResult = replaceSpacesWithOneResult + '1'
-    } else { 
-        replaceSpacesWithOneResult = replaceSpacesWithOneResult + text[i]
-    }
-}
-// console.log (replaceSpacesWithOneResult)
+replaceSpacesWithOneResult = text.replaceAll(" ", 1)
+// console.log(replaceSpacesWithOneResult)
 
 export { evenNumbersResult, smilePatternResult, replaceSpacesWithOneResult };
