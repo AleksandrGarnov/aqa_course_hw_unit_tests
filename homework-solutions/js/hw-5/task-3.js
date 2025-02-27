@@ -5,16 +5,15 @@
  */
 const word = 'hello';
 let vowelsAndConsonantsResult = '';
+const vowelsLetters = ['a','e','i','o','u']
+const consonantsLetters = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z'
+  ];
 let vowels = 0;
 let consonants = 0;
 for (let i = 0; i <= word.length; i++) {
-    if (word[i] === 'a' || word[i] === 'e' || word[i] === 'i' || word[i] === 'o' || word[i] === 'u') {
+    if (vowelsLetters.includes(word[i])) {
         vowels++
-    } else if (word[i] === 'b' || word[i] === 'c' || word[i] === 'd' || word[i] === 'f' || word[i] === 'g' ||
-        word[i] === 'h' || word[i] === 'j' || word[i] === 'k' || word[i] === 'l' || word[i] === 'm' ||
-        word[i] === 'n' || word[i] === 'p' || word[i] === 'q' || word[i] === 'r' || word[i] === 's' ||
-        word[i] === 't' || word[i] === 'v' || word[i] === 'w' || word[i] === 'x' || word[i] === 'y' ||
-        word[i] === 'z') {
+    } else if (consonantsLetters.includes(word[i])){
         consonants++
     }
 }
