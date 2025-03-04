@@ -13,25 +13,28 @@
   const myPizzasT2 = ['Peperoni', 'Caprichosa', 'Diablo', '4 cheeses', 'hawai'];
 */
 const competitorPizzas = ['Peperoni', 'Caprichosa', 'Diablo', '4 cheeses', 'hawai']
-let competitorPizzasLoverCase = competitorPizzas.map(el => el.toLowerCase())
-// console.log(competitorPizzasLoverCase)
+let competitorPizzasLowerCase = competitorPizzas.map(el => el.toLowerCase())
+console.log(competitorPizzasLowerCase) 
 const myPizzasT1 = ['Peperoni', 'Margherita', 'Diablo', 'Vegetarian'];
 const myPizzasT2 = ['Peperoni', 'Caprichosa', 'Diablo', '4 cheeses', 'hawai'];
 let resultUnique = []
-let resultNull;
-for (let i = 0; i < myPizzasT1.length;i++){
-  if(!competitorPizzasLoverCase.includes(myPizzasT1[i].toLowerCase())) {
-    resultUnique.push(myPizzasT1[i])
+let resultNull = null;
+
+for(let firstPizza of myPizzasT1) {
+  if(!competitorPizzasLowerCase.includes(firstPizza.toLowerCase())){
+    resultUnique.push(firstPizza);
   }
-};
-for (let i = 0; i < myPizzasT2.length;i++){
-  if(!competitorPizzasLoverCase.includes(myPizzasT2[i].toLowerCase())) {
-    resultUnique.push(myPizzasT2[i])
+}
+
+for(let secondPizza of myPizzasT2) {
+  if(!competitorPizzasLowerCase.includes(secondPizza.toLowerCase())){
+    resultUnique.push(secondPizza);
   }
-};
-resultNull = (resultUnique.length === 0) ? null : resultUnique;
+}
+if (resultUnique.length === 0) {
+  resultNull = null;
+}
 
 console.log(resultUnique)
 console.log(resultNull)
 export { resultNull, resultUnique };
-
