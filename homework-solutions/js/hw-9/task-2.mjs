@@ -39,9 +39,7 @@ getCharactersByAge(40)
 // console.log(getCharactersByAge(40))
 
 function updateCharacter(name, newCharacter) {
-  function getCharacter(name){
-    return characters.find(character => character.name === name)
-  }
+  getCharacter(name);
 const addCharacter = getCharacter(name);
 if (newCharacter) {
   Object.assign(addCharacter, newCharacter);
@@ -51,12 +49,9 @@ updateCharacter('Fred', { name: 'Frederick', age: 45 })
 // console.log(characters)
 
 function removeCharacter(name) {
-  let index = characters.findIndex(character => character.name === name);
-  if (!characters.some(character => character.name === name)) {
-    throw new Error('Character not found');
-  } else{
-  let deleteCharacter = characters.splice(index, 1);
-  }
+  const index = characters.findIndex(character => character.name === name);
+  if (index === -1) throw new Error('Character not found');
+  characters.splice(index, 1);
 }
 console.log(removeCharacter('Barney'))
 
