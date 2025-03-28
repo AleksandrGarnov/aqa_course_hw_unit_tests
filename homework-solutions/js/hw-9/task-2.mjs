@@ -40,11 +40,7 @@ getCharactersByAge(40)
 
 function updateCharacter(name, newCharacter) {
 
-  function getCharacter(name){
-    return characters.find(character => character.name === name)
-  }
   getCharacter(name);
-
 const addCharacter = getCharacter(name);
 if (newCharacter) {
   Object.assign(addCharacter, newCharacter);
