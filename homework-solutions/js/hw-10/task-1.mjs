@@ -10,7 +10,7 @@ let qa = {
   age: 28,
   salary: 3000,
   getInfo(greetingWord) {
-    return `${greetingWord}, my name is ${this.name}, i'm ${this.age} and my salary is ${this.salary}.`;
+    return `${greetingWord}, my name is ${this.name} I'm ${this.age} and my salary is ${this.salary}`;
   }
 }
 console.log(qa.getInfo('Hello'));
