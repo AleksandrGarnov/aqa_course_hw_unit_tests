@@ -10,7 +10,7 @@ let qa = {
   age: 28,
   salary: 3000,
   getInfo(greetingWord) {
-    return `${greetingWord}, my name is ${this.name} I'm ${this.age} and my salary is ${this.salary}`;
+    return `${greetingWord}, my name is ${this.name}, I'm ${this.age} and my salary is ${this.salary}`;
   }
 }
 console.log(qa.getInfo('Hello'));
@@ -31,7 +31,7 @@ let anotherQa = {
 
 
 // Используйте bind с greetingWord "Hello"
-let bindResult = qa.getInfo.bind(anotherQa, ('Hello'))
+let bindResult = qa.getInfo.bind(anotherQa, ('Hello'))();
 // console.log(bindResult());
 
 // Используйте call с greetingWord "Hi"
@@ -55,18 +55,21 @@ let applyResult = qa.getInfo.apply(anotherQa, ['Hey'])
 
 function createCounter() {
   let count = 0;
-
   return function () {
     count++;
+    return count;
     console.log(`Function was called ${count} times`);
   }
+  
 }
 const functionCallCounter = createCounter();
-functionCallCounter();
-functionCallCounter();
-functionCallCounter();
-functionCallCounter();
-functionCallCounter();
+// functionCallCounter();
+// functionCallCounter();
+// functionCallCounter();
+// functionCallCounter();
+// functionCallCounter();
+
+
 
 export { qa, bindResult, callResult, applyResult, functionCallCounter, anotherQa };
 
