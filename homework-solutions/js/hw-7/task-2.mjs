@@ -4,6 +4,7 @@
 */
 
 function isPalindrom(word) {
+
   if (typeof word !== "string") {
     return false
   } else {
@@ -26,6 +27,7 @@ if (typeof word !== "string") {
     return false
   }
 /*
+>>>>>>> main
 
 /*
  2. findLongestWords()
@@ -49,5 +51,6 @@ function findLongestWords(sentence) {
   }
 }
 console.log(findLongestWords("test sdfasdasd asdasdsa sadasdasdsahdklja askhdaksgdaskjhd askhdsakgdasda"));
+
 
 export { isPalindrom, findLongestWords };
