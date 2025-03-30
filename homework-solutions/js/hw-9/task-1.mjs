@@ -9,7 +9,7 @@
 */
 
 const character = { name: 'Barney', age: 36, gender: 'male', isQa: true };
-
+console.log(character)
 // 1
 let keyWithFourChars = Object.keys(character).filter(key => key.length === 4)
 // console.log(keyWithFourChars);
