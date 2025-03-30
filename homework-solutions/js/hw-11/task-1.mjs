@@ -12,32 +12,32 @@ class Employee {
     return this._firstName;
   };
 
-  get lastName(){
+  get lastName() {
     return this._lastName;
   };
-  get profession(){
+  get profession() {
     return this._profession
   };
-  get salary(){
+  get salary() {
     return this.#salary
   }
-  set firstName(value){
+  set firstName(value) {
     return this._firstName = value;
   };
-  set lastName(value){
+  set lastName(value) {
     return this._lastName = value;
   };
-  set profession(value){
+  set profession(value) {
     return this._profession = value;
   };
-  set salary(value){
+  set salary(value) {
     if (value < 0 || typeof (value) !== 'number') {
       throw new Error('Invalid salary');
     } else {
-    return this.#salary = value;
+      return this.#salary = value;
     }
   }
-getFullName(){ 
+  getFullName() {
     return `${this.firstName} ${this.lastName}`;
   }
 }
@@ -46,10 +46,7 @@ getFullName(){
 
 const emp1 = new Employee('John', 'Doe', 'Developer', 3000);
 
-console.log(emp1.firstName); // "John"
-emp1.salary = 3100;
-console.log(emp1.salary); // 3100
-console.log(emp1.getFullName()); 
+
 class Company {
   #employees
   constructor(title, phone, address, employees = []) {
