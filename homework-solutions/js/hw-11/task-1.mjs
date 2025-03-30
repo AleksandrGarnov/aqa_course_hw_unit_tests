@@ -49,7 +49,24 @@ emp1.salary = 3100;
 console.log(emp1.salary); // 3100
 console.log(emp1.getFullName()); 
 class Company {
-  // Ваш код
+  constructor(title,phone,address,employees = []) {
+    this._title = title;
+    this._phone = phone;
+    this._address = address;
+    this._employees = employees;
+  }
+  get title(){
+    return this._title;
+  };
+  get phone () {
+    return this._phone;
+  };
+  get address(){
+    return this._address;
+  }
+  }
+  }
+
 }
 
 export { Employee, Company };
