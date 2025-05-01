@@ -25,3 +25,4 @@ function validatePassword(password:string):boolean {
     console.log(validatePassword('test'));
     console.log(validatePassword("Password123 "));
     console.log(validatePassword("Password123 123"));
+    console.log(validatePassword(""));
