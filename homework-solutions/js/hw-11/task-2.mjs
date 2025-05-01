@@ -54,7 +54,7 @@ class Employee {
     if (typeof value !== 'string') {
       throw new Error('Type of Profession is wrong');
     }
-    if (value.trim().replaceAll(' ', '').length === 0) {
+    if (value.trim().length === 0) {
       throw new Error('Profession is empty');
     }
     if (!/^[A-Za-z ]+$/.test(value)) {
@@ -85,24 +85,24 @@ class Employee {
 }
 
 class Company {
-  _employees = [];
+  #employees = [];
   constructor(title, phone, address, employees = []) {
     this._title = title;
     this._phone = phone;
     this._address = address;
-    this._employees = employees;
+    this.#employees = employees;
   }
 
   getEmployees() {
-    return this._employees;
+    return this.#employees;
   }
 
   getTotalSalary() {
-    return this._employees.reduce((total, employee) => total + employee.salary, 0);
+    return this.#employees.reduce((total, employee) => total + employee.salary, 0);
   }
 
   findEmployeeByName(firstName) {
-    const employee = this._employees.find(employee => employee.firstName === firstName);
+    const employee = this.#employees.find(employee => employee.firstName === firstName);
     if (!employee) {
       throw new Error('Employee not found');
     }
@@ -110,19 +110,19 @@ class Company {
   }
 
   removeEmployee(firstName) {
-    const index = this._getEmployeeIndex(firstName);
+    const index = this.#getEmployeeIndex(firstName);
     if (index === -1) {
       throw new Error('Employee not found');
     }
-    this._employees.splice(index, 1);
+    this.#employees.splice(index, 1);
   }
 
-  _getEmployeeIndex(firstName) {
-    return this._employees.findIndex(employee => employee.firstName === firstName);
+  #getEmployeeIndex(firstName) {
+    return this.#employees.findIndex(employee => employee.firstName === firstName);
   }
 
   addEmployee(employee) {
-    this._employees.push(employee);
+    this.#employees.push(employee);
   }
 }
 
