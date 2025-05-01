@@ -89,6 +89,7 @@ class Company {
 
   #employees = [];
 
+
   constructor(title, phone, address, employees = []) {
     this._title = title;
     this._phone = phone;
@@ -106,7 +107,6 @@ class Company {
 
   findEmployeeByName(firstName) {
     const employee = this.#employees.find(employee => employee.firstName === firstName);
-
     if (!employee) {
       throw new Error('Employee not found');
     }
@@ -127,7 +127,6 @@ class Company {
 
   addEmployee(employee) {
     this.#employees.push(employee);
-
   }
 }
 
