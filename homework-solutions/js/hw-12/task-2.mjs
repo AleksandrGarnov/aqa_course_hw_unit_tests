@@ -9,6 +9,6 @@
 
    async function createTodo(body) {
     try {
-        
+        const response = await fetch('https://jsonplaceholder.typicode.com/todos', {
     }
    }
