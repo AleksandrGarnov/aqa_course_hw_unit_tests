@@ -55,6 +55,7 @@ class Employee {
       throw new Error('Type of Profession is wrong');
     }
     if (value.trim().length === 0) {
+
       throw new Error('Profession is empty');
     }
     if (!/^[A-Za-z ]+$/.test(value)) {
@@ -85,7 +86,9 @@ class Employee {
 }
 
 class Company {
+
   #employees = [];
+
   constructor(title, phone, address, employees = []) {
     this._title = title;
     this._phone = phone;
@@ -103,6 +106,7 @@ class Company {
 
   findEmployeeByName(firstName) {
     const employee = this.#employees.find(employee => employee.firstName === firstName);
+
     if (!employee) {
       throw new Error('Employee not found');
     }
@@ -123,6 +127,7 @@ class Company {
 
   addEmployee(employee) {
     this.#employees.push(employee);
+
   }
 }
 
